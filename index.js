@@ -54,8 +54,8 @@ const defaultText = document.querySelector(".default");
 const servicesHeaderText = document.querySelector(".services-text h2");
 const servicesText = document.querySelector(".services-text p");
 const card1Header = document.querySelector(".card1-header");
+const cardButton = document.querySelectorAll(".card-button");
 // ---------card1----------
-const card1Button = document.querySelector(".card1-for-modal");
 const multimodalHeader = document.querySelector(".multimodal-header");
 const multimodalText1 = document.querySelector(".multimodal-text1");
 const multimodalText2 = document.querySelector(".multimodal-text2");
@@ -67,37 +67,21 @@ const multimodalServices2 = document.querySelector(".multimodal-services2");
 const multimodalServices3 = document.querySelector(".multimodal-services3");
 const multimodalServices4 = document.querySelector(".multimodal-services4");
 const multimodalServices5 = document.querySelector(".multimodal-services5");
-const multimodalShipContainer = document.querySelector(
-  ".multimodal-ship-container"
-);
-const multimodalShipContainer1 = document.querySelector(
-  ".multimodal-ship-container1"
-);
-const multimodalShipContainer2 = document.querySelector(
-  ".multimodal-ship-container2"
-);
-const multimodalShipElement = document.querySelector(
-  ".multimodal-ship-element"
-);
-const multimodalShipElement1 = document.querySelector(
-  ".multimodal-ship-element1"
-);
-const multimodalShipElement2 = document.querySelector(
-  ".multimodal-ship-element2"
-);
-const multimodalShipElement3 = document.querySelector(
-  ".multimodal-ship-element3"
-);
+const multimodalShipContainer = document.querySelector(".m-ship-container");
+const multimodalShipContainer1 = document.querySelector(".m-ship-container1");
+const multimodalShipContainer2 = document.querySelector(".m-ship-container2");
+const multimodalShipElement = document.querySelector(".m-ship-element");
+const multimodalShipElement1 = document.querySelector(".m-ship-element1");
+const multimodalShipElement2 = document.querySelector(".m-ship-element2");
+const multimodalShipElement3 = document.querySelector(".m-ship-element3");
 // ---------card2----------
 const card2Header = document.querySelector(".card2-header");
-const card2Button = document.querySelector(".card2-for-modal");
 const bulkLoadsHeader = document.querySelector(".bulk-loads-header");
 const bulkLoadsText1 = document.querySelector(".bulk-loads-text1");
 const bulkLoadsText2 = document.querySelector(".bulk-loads-text2");
 const bulkLoadsText3 = document.querySelector(".bulk-loads-text3");
 // ---------card3----------
 const card3Header = document.querySelector(".card3-header");
-const card3Button = document.querySelector(".card3-for-modal");
 const airLoadsHeader = document.querySelector(".air-loads-header");
 const airLoadsText1 = document.querySelector(".air-loads-text1");
 const airLoadsH4 = document.querySelector(".air-loads-h4");
@@ -111,7 +95,6 @@ const airAviaElement1 = document.querySelector(".air-avia-element1");
 const airAviaElement2 = document.querySelector(".air-avia-element2");
 // ---------card4----------
 const card4Header = document.querySelector(".card4-header");
-const card4Button = document.querySelector(".card4-for-modal");
 const carCarriageHeader = document.querySelector(".car-carriage-header");
 const carCarriageText1 = document.querySelector(".car-carriage-text1");
 const carCarriageText2 = document.querySelector(".car-carriage-text2");
@@ -133,7 +116,6 @@ const carCarriage2B2 = document.querySelector(".car-carriage2-b2");
 const carCarriage2B3 = document.querySelector(".car-carriage2-b3");
 // ---------card5----------
 const card5Header = document.querySelector(".card5-header");
-const card5Button = document.querySelector(".card5-for-modal");
 const railwayHeader = document.querySelector(".railway-header");
 const railwayText1 = document.querySelector(".railway-text1");
 const railwayText2 = document.querySelector(".railway-text2");
@@ -145,7 +127,6 @@ const railwayB2 = document.querySelector(".railway-b2");
 const railwayB3 = document.querySelector(".railway-b3");
 // ---------card6----------
 const card6Header = document.querySelector(".card6-header");
-const card6Button = document.querySelector(".card6-for-modal");
 const dangerousHeader = document.querySelector(".dangerous-header");
 const dangerousText1 = document.querySelector(".dangerous-text1");
 const dangerousText2 = document.querySelector(".dangerous-text2");
@@ -189,7 +170,6 @@ const lessButton = document.querySelector(".less-button");
 // -------------contact------------
 const contactHeader = document.querySelector(".contact-header h2");
 const contactText = document.querySelector(".contact-header p");
-const contactButton = document.querySelectorAll(".contact-button");
 const azerbaijanText = document.querySelector(".azerbaijan-text");
 const azerbaijanOffice = document.querySelector(".azerbaijan-office");
 const azerbaijanAddress = document.querySelector(".azerbaijan-address");
@@ -262,9 +242,11 @@ function updateMenuText(lang) {
     servicesHeaderText.textContent = "Xidmətlər";
     servicesText.textContent =
       "Müştərilərimizin xüsusi logistika və ekspedisiya ehtiyaclarının hər son detalı idarə etmək qabiliyyəti ilə dünyada tanınan, Mayak Cargo bütün logistikalarınıza qayğı göstərir.";
+    for (let i = 0; i < cardButton.length; i++) {
+      cardButton[i].textContent = "Ətraflı";
+    }
     // -----------------card1------------
     card1Header.textContent = "Multimodal Daşımalar";
-    card1Button.textContent = "Ətraflı";
     multimodalHeader.textContent = "Multimodal Daşımalar";
     multimodalText1.textContent =
       "Konteyner daşımaları transkontinental əlaqələrdə istifadə olunan yük daşınmalarının ən əlverişli növlərindən biridir. Qarışıq və yaxud, belə demək olarsa, multimodal daşımaların konteynerlər vasitəsilə həyata keçirilməsi yüklərin daşınması, saxlanılması və boşaldılıb yüklənməsi ilə əlaqədar olan xərcləri azaltmağa imkan yaratdığı üçün daha effektli hesab olunur. İdxal və ixracla məşğul olan ölkələrin yük daşımalarının əhəmiyyətli hissəsini dəniz nəqliyyatı ilə konteyner daşımaları təşkil edir və bu nəqliyyat növü Cənub-Şərqi Asiya və Amerika ölkələrinə və bu ölkələrindən digər kontinentlərə yüklərin çatdırılması zamanı əvəzedilməzdir.";
@@ -296,7 +278,6 @@ function updateMenuText(lang) {
     multimodalShipElement3.textContent =
       "Limandan buraxılmanın hava şəraitindən asılılığı";
     // -----------------card2------------
-    card2Button.textContent = "Ətraflı";
     card2Header.textContent = "Yığma Yüklərin Daşınması";
     bulkLoadsHeader.textContent = "YIĞMA YÜKLƏRİN DAŞINMASI";
     bulkLoadsText1.textContent =
@@ -307,7 +288,6 @@ function updateMenuText(lang) {
       "Yükünüzü Mayak Cargo-ya etibar edin və biz sizin etimadınızı doğruldacağıq!";
     // -----------------card3------------
     card3Header.textContent = "Hava Yolu Daşımaları";
-    card3Button.textContent = "Ətraflı";
     airLoadsHeader.textContent = "HAVA YOLU DAŞIMALARI";
     airLoadsText1.textContent =
       "Bizim şirkətin mütəxəssisləri sizin eksport və yaxud import yükünüzün ölkədən və əksinə - təyinat ölkəsinə vaxtında nəqlini keyfiyyətli və minimal xərclə həyata keçirir. Bizim nümayəndələrimiz yükünüzü bilavasitə sizin anbarınızda, həmçinin müxtəlif ölkələrin beynəlxalq aeroportlarında qəbul edə bilərlər. Zəruri olarsa, biz bütün gömrük və daşınma sənədlərini də tərtib edə bilərik.";
@@ -324,7 +304,6 @@ function updateMenuText(lang) {
     airAviaElement2.textContent = "Yüklərin qabaritinə görə məhdudiyyətlər";
     // -----------------card4------------
     card4Header.textContent = "Avtomobil Daşımaları";
-    card4Button.textContent = "Ətraflı";
     carCarriageHeader.textContent = "AVTOMOBİL DAŞIMALARI";
     carCarriageText1.textContent =
       "Avtomobil daşımaları beynəlxalq nəqliyyatda yüklərin çatdırılmasının ən çox tələb olunan və rahat vasitələrindən biridir. Avtomobil daşımaları daha çox Avropa, MDB və yaxın Şərq ölkələri ilə işləmək üçün əlverişlidir.";
@@ -357,7 +336,6 @@ function updateMenuText(lang) {
       "Uzun məsafələrə daşıma zamanı bahalı nəqliyyat növü";
     // -----------------card5------------
     card5Header.textContent = "Dəmir Yolu Daşımaları";
-    card5Button.textContent = "Ətraflı";
     railwayHeader.textContent = "DƏMİR YOLU DAŞIMALARI";
     railwayText1.textContent =
       "Dəmir yolu daşımaları yükün istənilən məsafələrə optimal rahat çardırılma üsuludur. Bu daşıma növünün üstünlükləri ilk növbədə böyük yükgötürmə qabiliyyəti, müxtəlif parametrlərə malik olan və yükləmənin müxtəlif texnologiyalarını tələb edən yüklərin çatdırılma imkanının olmasıdır. Avtomobil daşımalarında qeyri-qabarit sayılan yüklərin daşınması uzun müddətli danışıqlar və xüsusi avtomobillərin cəlb olunmasını tələb edirsə, belə yüklərin dəmir yolu ilə daşınması kifayət qədər tez və sadə yolla rəsmiləşdirilir və bu yüklər asanlıqla vaqon və ya platformalara yerləşdirilir. Nəqliyyat növləri arasında dəmir yolu ilə yük daşımalarının populyarlığına təkan verən vacib faktorlardan biri də onun əlverişliliyi və artıq xərclərin olmamasıdır.";
@@ -374,7 +352,6 @@ function updateMenuText(lang) {
       "Bütün marşrut üzrə daşınma kodlarının alınması, təyinat stansiyasına və dəmir yolu idarəsinə teleqramların göndərilməsi";
     // -----------------card6------------
     card6Header.textContent = "Təhlükəli Yüklərin Daşınması";
-    card6Button.textContent = "Ətraflı";
     dangerousHeader.textContent =
       "QEYRİ-QABARİT VƏ TƏHLÜKƏLİ YÜKLƏRİN DAŞINMASI";
     dangerousText1.textContent =
@@ -446,9 +423,6 @@ function updateMenuText(lang) {
     moreButton.textContent = "Daha çox";
     lessButton.textContent = "Daha az";
     // ------------contact-------------
-    for (let i = 0; i < contactButton.length; i++) {
-      contactButton[i].textContent = "ƏLAQƏ";
-    }
     contactHeader.textContent = "ƏLAQƏ";
     contactText.textContent = "Bizimlə çox asanlıqla əlaqə saxlaya bilərsiniz.";
     azerbaijanText.textContent = "Azərbaycan";
@@ -494,9 +468,11 @@ function updateMenuText(lang) {
     servicesHeaderText.textContent = "Services";
     servicesText.textContent =
       "Globally known for our ability to handle every last detail of our customers’ particular logistics and forwarding needs, Mayak Cargo takes care of all your logistics.";
+    for (let i = 0; i < cardButton.length; i++) {
+      cardButton[i].textContent = "Read More";
+    }
     // -----------------card1------------
     card1Header.textContent = "Multimodal Transportation";
-    card1Button.textContent = "Read More";
     multimodalHeader.textContent = "Multimodal Transportation";
     multimodalText1.textContent =
       "Container transportation is one of the most favorable types of freight used in transcontinental communications. Mixed or, in other words, multimodal transportation through containers is considered to be more effective as it reduces costs associated with shipping, storing and unloading. Container shipping by sea is a significant part of cargo transportation by importing and exporting countries, and this type of transport is irreplaceable in the delivery of goods to Southeast Asia and America and to other continents.";
@@ -528,7 +504,6 @@ function updateMenuText(lang) {
     multimodalShipElement3.textContent =
       "Dependence on weather conditions, port capacity";
     // -----------------card2------------
-    card2Button.textContent = "Read More";
     card2Header.textContent = "Groupage Cargo";
     bulkLoadsHeader.textContent = "GROUPAGE CARGO";
     bulkLoadsText1.textContent =
@@ -539,7 +514,6 @@ function updateMenuText(lang) {
       "Entrust your Mayak Cargo and we will not deceive your hopes!";
     // -----------------card3------------
     card3Header.textContent = "Air Transportation";
-    card3Button.textContent = "Read More";
     airLoadsHeader.textContent = "AIR TRANSPORTATION";
     airLoadsText1.textContent =
       "Our company specialists carry out the export of your export or import cargo from the country and vice versa - to the destination country with high quality and minimal costs. Our representatives can accept your luggage directly at your warehouse, as well as at international airports of various countries. If necessary, we can also compile all customs and shipping documents.";
@@ -557,7 +531,6 @@ function updateMenuText(lang) {
     airAviaElement2.textContent = "Limitations on load handling";
     // -----------------card4------------
     card4Header.textContent = "Car Transportation";
-    card4Button.textContent = "Read More";
     carCarriageHeader.textContent = "CAR TRANSPORTATION";
     carCarriageText1.textContent =
       "Road transport is one of the most popular and convenient ways to deliver goods in international traffic. Trucking is most suitable for working with countries in Europe, the CIS and the Middle East.";
@@ -590,7 +563,6 @@ function updateMenuText(lang) {
       "Expensive transportation when traveling over long distances";
     // -----------------card5------------
     card5Header.textContent = "Rail Transportation";
-    card5Button.textContent = "Read More";
     railwayHeader.textContent = "RAIL TRANSPORTATION";
     railwayText1.textContent =
       "Rail transportation is an optimal way to deliver goods at any distance. First of all, attractive is a large carrying capacity, the ability to deliver items with different parameters, requiring various loading technologies. Goods that are considered oversized in road transport, require long-term approvals and special vehicles, can easily be placed on trains, and they are processed quickly and easily. And, of course, an important factor contributing to the popularity of the transportation of goods by rail is its economy, the ability to avoid unnecessary costs.";
@@ -606,7 +578,6 @@ function updateMenuText(lang) {
       "Receiving shipping codes for all routes, sending telegrams to the destination station and the railway office";
     // -----------------card6------------
     card6Header.textContent = "Transportation Of Dangerous Goods";
-    card6Button.textContent = "Read More";
     dangerousHeader.textContent =
       "TRANSPORTATION OF NON-LETHAL AND DANGEROUS GOODS";
     dangerousText1.textContent =
@@ -680,9 +651,6 @@ function updateMenuText(lang) {
     moreButton.textContent = "More";
     lessButton.textContent = "Less";
     // ------------contact-------------
-    for (let i = 0; i < contactButton.length; i++) {
-      contactButton[i].textContent = "Contact Us";
-    }
     contactHeader.textContent = "CONTACT US";
     contactText.textContent = "You can contact us very easily.";
     azerbaijanText.textContent = "Azerbaijan";
@@ -728,9 +696,11 @@ function updateMenuText(lang) {
     servicesHeaderText.textContent = "Услуги";
     servicesText.textContent =
       "Компания Mayak Cargo известна во всем мире благодаря нашей способности обрабатывать все до мелочей конкретные потребности наших клиентов в логистике и экспедиторских услугах.";
+    for (let i = 0; i < cardButton.length; i++) {
+      cardButton[i].textContent = "Подробнее";
+    }
     // -----------------card1------------
     card1Header.textContent = "Мультимодальные Перевозки";
-    card1Button.textContent = "Подробнее";
     multimodalHeader.textContent = "Мультимодальные Перевозки";
     multimodalText1.textContent =
       "Контейнерные перевозки один из наиболее экономичных видов транспортировки грузов, используемых в трансконтинентальном сообщении. Применение контейнеров повышает эффективность смешанных или, так называемых, мультимодальных перевозок, так как позволяют снизить затраты связанные с перевозкой, хранением и перевалкой грузов. Контейнерные перевозки морским транспортом обеспечивают значительную часть грузооборота стран импортеров и экспортеров и являются незаменимыми при доставке грузов в страны или из стран Юго –Восточной Азии и Америки на другие континенты.";
@@ -762,7 +732,6 @@ function updateMenuText(lang) {
     multimodalShipElement3.textContent =
       "Зависимость от погодных условий, пропускной способности портов";
     // -----------------card2------------
-    card2Button.textContent = "Подробнее";
     card2Header.textContent = "Перевозка сборных грузов";
     bulkLoadsHeader.textContent = "ПЕРЕВОЗКА СБОРНЫХ ГРУЗОВ";
     bulkLoadsText1.textContent =
@@ -773,7 +742,6 @@ function updateMenuText(lang) {
       "Доверьте свой груз Mayak Cargo и мы не обманем ваши надежды!";
     // -----------------card3------------
     card3Header.textContent = "Воздушные Авиаперевозки";
-    card3Button.textContent = "Подробнее";
     airLoadsHeader.textContent = "ВОЗДУШНЫЕ АВИАПЕРЕВОЗКИ";
     airLoadsText1.textContent =
       "Специалисты нашей компании осуществляют вывоз вашего экспортного или импортного груза из страны и наоборот - в страну назначения с высоким качеством и минимальными затратами. Наши представители могут принять ваш багаж непосредственно на вашем складе, а также в международных аэропортах разных стран. При необходимости мы также можем составить все таможенные и товаросопроводительные документы.";
@@ -790,7 +758,6 @@ function updateMenuText(lang) {
     airAviaElement2.textContent = "Ограничения по габаритам грузов";
     // -----------------card4------------
     card4Header.textContent = "Автомобильные Перевозки";
-    card4Button.textContent = "Подробнее";
     carCarriageHeader.textContent = "АВТОМОБИЛЬНЫЕ ПЕРЕВОЗКИ";
     carCarriageText1.textContent =
       "Автомобильные перевозки один из наиболее востребованных и удобных способов доставки грузов в международном сообщении. Автоперевозки наиболее подходят для работы со странами Европы, СНГ и ближнего Востока.";
@@ -822,7 +789,6 @@ function updateMenuText(lang) {
       "Дорогой вид транспорта при перевозках на большие расстояния";
     // -----------------card5------------
     card5Header.textContent = "Железнодорожные Перевозки";
-    card5Button.textContent = "Подробнее";
     railwayHeader.textContent = "ЖЕЛЕЗНОДОРОЖНЫЕ ПЕРЕВОЗКИ";
     railwayText1.textContent =
       "Железнодорожные перевозки оптимально удобный способ доставки товаров на любые расстояния. Привлекательна в первую очередь большая грузоподъемность, возможность доставки предметов, обладающих разными параметрами, требующих различных технологий загрузки. Товары, которые при автомобильной перевозке считаются негабаритом, нуждаются в длительных согласованиях и привлечении особых машин, без труда помещаются в поездах, оформляются достаточно быстро и просто. И, конечно, немаловажным фактором, способствующим популярности транспортировки грузов железными дорогами, является ее экономичность, возможность избежать лишних затрат.";
@@ -838,7 +804,6 @@ function updateMenuText(lang) {
       "Получение кодов доставки для всех маршрутов, отправка телеграмм на станцию назначения и в железнодорожный офис";
     // -----------------card6------------
     card6Header.textContent = "Перевозка Опасных Грузов";
-    card6Button.textContent = "Подробнее";
     dangerousHeader.textContent = "ПЕРЕВОЗКА НЕГАБАРИТНЫХ И ОПАСНЫХ ГРУЗОВ";
     dangerousText1.textContent =
       "Грузы превышающие стандартные размеры грузовой техники (2,45 – ширина, 13,6 - длина ,3,1 м - высота) и весом свыше 24 тонн называются негабаритними. Перевозка негабаритных грузов требует специальной техники а также получения согласований на перевозку негабаритного груза по всему маршруту следования. Для таких перевозок, как правило, тщательно выбирается маршрут, учитывая высоту и ширину мостов и ограждений, национальные правила перевозки негабаритных грузов в странах транзита.";
@@ -911,9 +876,6 @@ function updateMenuText(lang) {
     moreButton.textContent = "Подробнее";
     lessButton.textContent = "Скрыть";
     // ------------contact-------------
-    for (let i = 0; i < contactButton.length; i++) {
-      contactButton[i].textContent = "КОНТАКТЫ";
-    }
     contactHeader.textContent = "КОНТАКТЫ";
     contactText.textContent = "Вы можете связаться с нами очень легко.";
     azerbaijanText.textContent = "Азербайджан";
@@ -998,42 +960,42 @@ let modals = document.querySelectorAll(".modals");
 for (let i = 0; i < modals.length; i++) {
   modals[i].style.display = "none";
 }
-document.querySelector(".card1-for-modal").addEventListener("click", () => {
+document.querySelector(".card1-button").addEventListener("click", () => {
   document.querySelector(".modal-card1").style.display = "block";
   let cards = document.querySelectorAll(".card");
   for (let i = 0; i < cards.length; i++) {
     cards[i].style.display = "none";
   }
 });
-document.querySelector(".card2-for-modal").addEventListener("click", () => {
+document.querySelector(".card2-button").addEventListener("click", () => {
   document.querySelector(".modal-card2").style.display = "block";
   let cards = document.querySelectorAll(".card");
   for (let i = 0; i < cards.length; i++) {
     cards[i].style.display = "none";
   }
 });
-document.querySelector(".card3-for-modal").addEventListener("click", () => {
+document.querySelector(".card3-button").addEventListener("click", () => {
   document.querySelector(".modal-card3").style.display = "block";
   let cards = document.querySelectorAll(".card");
   for (let i = 0; i < cards.length; i++) {
     cards[i].style.display = "none";
   }
 });
-document.querySelector(".card4-for-modal").addEventListener("click", () => {
+document.querySelector(".card4-button").addEventListener("click", () => {
   document.querySelector(".modal-card4").style.display = "block";
   let cards = document.querySelectorAll(".card");
   for (let i = 0; i < cards.length; i++) {
     cards[i].style.display = "none";
   }
 });
-document.querySelector(".card5-for-modal").addEventListener("click", () => {
+document.querySelector(".card5-button").addEventListener("click", () => {
   document.querySelector(".modal-card5").style.display = "block";
   let cards = document.querySelectorAll(".card");
   for (let i = 0; i < cards.length; i++) {
     cards[i].style.display = "none";
   }
 });
-document.querySelector(".card6-for-modal").addEventListener("click", () => {
+document.querySelector(".card6-button").addEventListener("click", () => {
   document.querySelector(".modal-card6").style.display = "block";
   let cards = document.querySelectorAll(".card");
   for (let i = 0; i < cards.length; i++) {

@@ -40,6 +40,13 @@ html {
   --traffic-element-border-color: white;
   --flag-background-color: white;
   --traffic-arrow-color: #f69f12;
+  --contact-card-background-color: white;
+  --contact-card-border-color: #f69f12;
+  --contact-text-color: #2f4858;
+  --contact-card-back-background-color: #f69f12;
+  --contact-card-back-border-color: #f69f12;
+  --contact-button-background-color: #f69f12;
+  --contact-button-border-color: #f69f12;
 }
 /* --------------header----------------- */
 header {
@@ -540,7 +547,6 @@ nav {
   color: var(--white-text-color);
   font-size: 14px;
 }
-
 #arrowAnim {
   width: 100vw;
   display: flex;
@@ -701,7 +707,7 @@ nav {
   background-image: url(./images/irakflag.svg);
 }
 .front-country {
-  background-color: #fff;
+  background-color: var(--contact-card-background-color);
   background-size: 230px;
   background-repeat: no-repeat;
   background-position: center;
@@ -716,20 +722,20 @@ nav {
   display: block;
   border-radius: 6px;
   backface-visibility: hidden;
-  border: 2px solid #f69f12;
+  border: 2px solid var(--contact-card-border-color);
 }
 .inner h3 {
   position: absolute;
   top: 25px;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #f69f12;
+  color: var(--orange-text-color);
   font-size: 24px;
   font-weight: 900;
   text-transform: uppercase;
 }
 .only-text-in-back {
-  color: #2f4858;
+  color: var(--contact-text-color);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -744,15 +750,15 @@ nav {
   border-radius: 8px;
 }
 .iran-texts::-webkit-scrollbar-track {
-  background: black;
+  background-color: var(--black-text-color);
 }
 .iran-texts::-webkit-scrollbar-thumb {
-  background-color: #ffffff;
+  background-color: var(--white-text-color);
 }
 .back-info {
   transform: rotateY(180deg);
-  background: #f69f12;
-  border: 2px solid #f69f12;
+  background-color: var(--contact-card-back-background-color);
+  border: 2px solid var(--contact-card-border-color);
 }
 .button {
   grid-column: 1/-1;
@@ -769,9 +775,9 @@ nav {
   height: 3em;
   line-height: 2.9em;
   min-width: 3em;
-  background-color: #f69f12;
-  border: solid 2px #f69f12;
-  color: #fff;
+  background-color: var(--contact-button-background-color);
+  border: solid 2px var(--contact-card-border-color);
+  color: var(--white-text-color);
   border-radius: 4px;
   text-align: center;
   left: 50%;
@@ -785,15 +791,15 @@ nav {
 }
 .button.return {
   line-height: 3em;
-  color: white;
-  border-color: white;
-  background-color: white;
+  color: var(--white-text-color);
+  border-color: var(--white-text-color);
+  background-color: var(--white-text-color);
   text-shadow: none;
 }
 /* -------------------------------footer------------------------------- */
 footer {
   width: 100%;
-  background-color: black;
+  background-color: var(--black-text-color);
   padding: 30px 0;
 }
 footer ul {
@@ -815,11 +821,11 @@ footer ul li:last-child {
   order: 2;
 }
 footer ul li:first-child p {
-  color: white;
+  color: var(--white-text-color);
   font-size: 16px;
 }
 footer ul li:first-child p b {
-  color: #f69f12;
+  color: var(--orange-text-color);
 }
 footer ul li:nth-child(2) img {
   width: 30px;
@@ -839,6 +845,6 @@ footer ul li:last-child img {
   width: 20px;
 }
 footer ul li:last-child a {
-  color: white;
+  color: var(--white-text-color);
   text-decoration: none;
 }
