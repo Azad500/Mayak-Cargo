@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* --------------text-color------------ */
+  --navbar-text-color: white;
+}
+@media screen and (min-width: 992px) {
+  nav {
+    width: 80%;
+  }
+  .logo-image img {
+    width: 180px;
+  }
+  .lang-and-hamburger {
+    gap: 50px;
+  }
+  .menu-texts {
+    display: flex;
+    gap: 50px;
+  }
+  .menu-texts a {
+    text-decoration: none;
+    color: var(--navbar-text-color);
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+    font-size: 20px;
+  }
+  .menu-texts a::before {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #f69f12;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  .menu-texts a:hover::before {
+    transform: scaleX(1);
+  }
+  .menu-texts a:hover {
+    transform: scale(1.1);
+  }
+
+  .hamburger-element {
+    display: none;
+  }
+  /* ----------------------main------------------------ */
+  /* ------------ship---------------- */
+  .ship-background {
+    height: 100vh;
+  }
+  #myVideo {
+    height: 100vh;
+  }
+  .ship-image img {
+    height: 100vh;
+  }
+  .ship-text {
+    top: 50%;
+    left: 50%;
+  }
+  .ship-text h1 {
+    font-size: 45px;
+  }
+  .ship-text p {
+    font-size: 26px;
+  }
+  .ship-text a {
+    font-size: 20px;
+  }
+  .overlay {
+    justify-content: start;
+  }
+  /* ---------------------card-flip------------------- */
+  /* ---------modal------------ */
+  .card-texts {
+    height: unset;
+    overflow-y: unset;
+  }
+  .card {
+    width: 600px;
+    height: 400px;
+  }
+  .front .image img {
+    width: 600px;
+    height: 400px;
+  }
+  .services-text p {
+    font-size: 20px;
+  }
+  .buttons {
+    display: none;
+  }
+  .youtube-video iframe {
+    min-height: 80vh;
+  }
+  /* --------------------------about-us---------------------- */
+  .about-us-header p {
+    font-size: 20px;
+  }
+  .about-us-text p {
+    font-size: 20px;
+  }
+  /* --------------------direction-of-traffic------------------- */
+  .traffic-container h2 {
+    font-size: 30px;
+  }
+  .left-side-flag,
+  .middle-side,
+  .right-side-flag {
+    height: unset;
+  }
+  .flag-element {
+    height: 120px;
+  }
+  .flag-element img {
+    width: 120px;
+  }
+  .flag-text p,
+  .flag-text b {
+    font-size: 18px;
+  }
+  .flag-text p {
+    font-size: 14px;
+  }
+  /* ------------------------contact--------------------------- */
+  .contact-header p {
+    font-size: 20px;
+  }
+}

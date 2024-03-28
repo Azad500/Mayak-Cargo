@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .logo-image img {
+    width: 160px;
+  }
+  /* ----------------------main------------------------ */
+  /* ------------ship---------------- */
+  .ship-text {
+    top: 60%;
+    left: 50%;
+  }
+  .ship-text h1 {
+    font-size: 35px;
+  }
+  .ship-text p {
+    font-size: 18px;
+  }
+  /* ---------------------card-flip------------------- */
+  .services-text p {
+    width: 80%;
+  }
+  .overlay h2 {
+    font-size: 25px;
+  }
+  .services-text p {
+    font-size: 18px;
+  }
+  .card {
+    width: 300px;
+    height: 300px;
+  }
+  .front .image img {
+    width: 300px;
+    height: 300px;
+  }
+  .youtube-video iframe {
+    min-height: 60vh;
+  }
+  /* --------------------------about-us---------------------- */
+  .about-us-header p {
+    font-size: 18px;
+  }
+  .about-us-text p {
+    font-size: 18px;
+  }
+  /* --------------------direction-of-traffic------------------- */
+  .more-button,
+  .less-button {
+    font-size: 16px;
+  }
+  .traffic-elements {
+    flex-direction: unset;
+    justify-content: space-between;
+  }
+  .traffic-container h2 {
+    font-size: 25px;
+  }
+  .left-side-flag,
+  .middle-side,
+  .right-side-flag {
+    height: 120px;
+  }
+  .flag-text p,
+  .flag-text b {
+    font-size: 16px;
+  }
+  .flag-text p {
+    font-size: 12px;
+  }
+  .arrow {
+    transform: rotate(135deg);
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateX(-8vw);
+    }
+    20% {
+      opacity: 1;
+      transform: translateX(-4vw);
+    }
+    80% {
+      opacity: 1;
+      transform: translateX(4vw);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(8vw);
+    }
+  }
+  /* ------------------------contact--------------------------- */
+  .contact-header p {
+    font-size: 18px;
+  }
+  .wrapper {
+    flex-direction: unset;
+    justify-content: center;
+  }
+  /* ------------------------footer--------------------------- */
+  footer ul {
+    justify-content: space-between;
+    flex-direction: unset;
+  }
+  footer ul li:first-child {
+    order: 1;
+  }
+  footer ul li:nth-child(2) {
+    order: 2;
+  }
+  footer ul li:last-child {
+    order: 3;
+  }
+}
